@@ -1,5 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-    <h3>
-        
-    </h3>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Studio</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  
 </head>
+<body>
+  <form class="form js-speaker-form">
+    <div class="form-fielf">
+      <label for="name" class="form-label">Ім'я</label>
+      <input class="form-input" type="text" name="name" id="name" placeholder="Юрій Юрійович" autofocus>
+    </div>
+    <div class="form-fielf">
+      <label for="tel">Телефон</label>
+      <input type="tel" name="tel" id="tel">
+    </div>
+    <div class="form-fielf">
+      <label for="mail">Телефон</label>
+      <input type="email" name="mail" id="mail">
+    </div>
+    <br />
+    
+
+     <br>
+    <div role="group" class="group">
+      <h2 class="group-title">Тема доповіді</h2>
+      <ul class="topic-options">
+        <li>
+          <input type="checkbox" name="topic" value="html" id="html">
+          <label for="html">HTML</label>
+        </li>
+        <li>
+          <input type="checkbox" name="topic" value="css" id="css">
+          <label for="css">CSS</label>
+        </li>
+        <li>
+          <input type="checkbox" name="topic" value="js" id="js">
+          <label for="js">JS</label>
+        </li>
+      </ul>
+    </div>
+    <!-- Радіо кнопки -->
+    <div role="group" class="group">
+      <h2 class="group-title">Рівень експертності</h2>
+      <ul class="experince-options">
+        <li class="experince-list">
+          <input type="radio" name="experience" value="junior" id="junior">
+          <label for="junior">Junior</label>
+        </li>
+        <li class="experince-list">
+          <input type="radio" name="experience" value="midle" id="midle">
+          <label for="midle">Midle</label>
+        </li>
+        <li class="experince-list">
+          <input type="radio" name="experience" value="senior" id="senior">
+          <label for="senior">Senior</label>
+        </li>
+      </ul>  
+    </div>
+
+    <!-- Дата і час -->
+    <div class="form-field">
+      <input type="date" name="date" id="date" min="2020-04-12" class="date">
+      <label for="date">Дата доповіді</label>
+    </div>
+    <div class="form-field">
+      <input type="time" name="time" id="time">
+      <label for="time">Час доповіді</label>
+    </div>
+
+    <!-- Завантаження -->
+    <div class="form-field">
+      <input type="file" name="pdf" id="pdf">
+      <label for="pdf">Завантажте файл в pdf</label>
+    </div>
+
+    <!-- Для заборони змінювати розмір вікна resize:none у CSS -->
+    <div class="form-field">
+      <label for="comment">Залишіть коментар</label>
+      <textarea class="comment" name="comment" id="comment" rows="10"></textarea>
+    </div>
+    
+    <!-- Політика конфіденційності -->
+    <div class="form-field">
+      <input type="checkbox" name="policy" id="policy">
+      <label for="policy">Погоджуюся</label>
+    </div>
+
+      <button tupe="submit">Залишити заявку</button>
+
+      <!-- Autocomplete off- без підказок (паролі) за замовчуванням on -->
+      <!-- <input type="checkbox" name="policy" id="policy" autocomplete="off"> -->
+
+      <!-- Placeholder дозволяє залишити підказку до моменту вводу -->
+
+
+
+
+  </form>
+
+  
+  <script>
+    (() => {
+      .querySelector('.js-speaker-form')
+      .addEventListener('submit', e => {
+        e.preventDefault();
+
+        new FormData(e.currentTarget).forEach((value, name) => 
+        console.log('${name}: ${value}'),
+        );
+      });
+    })(); 
+  </scipt>
+</body>
+</html>
