@@ -10,36 +10,33 @@
 </head>
 <body>
   <form class="form js-speaker-form">
-    <div class="form-fielf">
+    <div class="form-field">
       <label for="name" class="form-label">Ім'я</label>
       <input class="form-input" type="text" name="name" id="name" placeholder="Юрій Юрійович" autofocus>
     </div>
-    <div class="form-fielf">
-      <label for="tel">Телефон</label>
-      <input type="tel" name="tel" id="tel">
+    <div class="form-field">
+      <label for="tel"class="form-label">Телефон</label>
+      <input class="form-input" type="tel" name="tel" id="tel">
     </div>
-    <div class="form-fielf">
-      <label for="mail">Телефон</label>
-      <input type="email" name="mail" id="mail">
+    <div class="form-field">
+      <label for="mail"class="form-label">Телефон</label>
+      <input class="form-input" type="email" name="mail" id="mail">
     </div>
-    <br />
-    
-
-     <br>
+   
     <div role="group" class="group">
       <h2 class="group-title">Тема доповіді</h2>
       <ul class="topic-options">
         <li>
-          <input type="checkbox" name="topic" value="html" id="html">
-          <label for="html">HTML</label>
+          <input class="form-input" type="checkbox" name="topic" value="html" id="html">
+          <label for="html"class="form-label">HTML</label>
         </li>
         <li>
-          <input type="checkbox" name="topic" value="css" id="css">
-          <label for="css">CSS</label>
+          <input class="form-input" type="checkbox" name="topic" value="css" id="css">
+          <label for="css"class="form-label">CSS</label>
         </li>
         <li>
-          <input type="checkbox" name="topic" value="js" id="js">
-          <label for="js">JS</label>
+          <input class="form-input" type="checkbox" name="topic" value="js" id="js">
+          <label for="js"class="form-label">JS</label>
         </li>
       </ul>
     </div>
@@ -48,49 +45,49 @@
       <h2 class="group-title">Рівень експертності</h2>
       <ul class="experince-options">
         <li class="experince-list">
-          <input type="radio" name="experience" value="junior" id="junior">
-          <label for="junior">Junior</label>
+          <input class="form-input" type="radio" name="experience" value="junior" id="junior">
+          <label for="junior" class="form-label">Junior</label>
         </li>
         <li class="experince-list">
-          <input type="radio" name="experience" value="midle" id="midle">
-          <label for="midle">Midle</label>
+          <input class="form-input" type="radio" name="experience" value="midle" id="midle">
+          <label for="midle" class="form-label">Midle</label>
         </li>
         <li class="experince-list">
-          <input type="radio" name="experience" value="senior" id="senior">
-          <label for="senior">Senior</label>
+          <input class="form-input" type="radio" name="experience" value="senior" id="senior">
+          <label for="senior" class="form-label">Senior</label>
         </li>
       </ul>  
     </div>
 
     <!-- Дата і час -->
     <div class="form-field">
-      <input type="date" name="date" id="date" min="2020-04-12" class="date">
-      <label for="date">Дата доповіді</label>
+      <input class="form-input" type="date" name="date" id="date" min="2020-04-12" class="date">
+      <label for="date" class="form-label">Дата доповіді</label>
     </div>
     <div class="form-field">
-      <input type="time" name="time" id="time">
-      <label for="time">Час доповіді</label>
+      <input class="form-input" type="time" name="time" id="time">
+      <label for="time" class="form-label">Час доповіді</label>
     </div>
 
     <!-- Завантаження -->
     <div class="form-field">
-      <input type="file" name="pdf" id="pdf">
-      <label for="pdf">Завантажте файл в pdf</label>
+      <input class="form-input" type="file" name="pdf" id="pdf">
+      <label for="pdf" class="form-label">Завантажте файл в pdf</label>
     </div>
 
     <!-- Для заборони змінювати розмір вікна resize:none у CSS -->
     <div class="form-field">
-      <label for="comment">Залишіть коментар</label>
+      <label for="comment" class="form-label">Залишіть коментар</label>
       <textarea class="comment" name="comment" id="comment" rows="10"></textarea>
     </div>
     
     <!-- Політика конфіденційності -->
     <div class="form-field">
-      <input type="checkbox" name="policy" id="policy">
-      <label for="policy">Погоджуюся</label>
+      <input class="form-input" type="checkbox" name="policy" id="policy">
+      <label for="policy" class="form-label">Погоджуюся</label>
     </div>
 
-      <button tupe="submit">Залишити заявку</button>
+      <button type="submit">Залишити заявку</button>
 
       <!-- Autocomplete off- без підказок (паролі) за замовчуванням on -->
       <!-- <input type="checkbox" name="policy" id="policy" autocomplete="off"> -->
@@ -101,8 +98,6 @@
 
 
   </form>
-
-  
   <script>
     (() => {
       .querySelector('.js-speaker-form')
@@ -114,6 +109,6 @@
         );
       });
     })(); 
-  </scipt>
+  </script>
 </body>
 </html>

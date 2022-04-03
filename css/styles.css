@@ -15,8 +15,8 @@ textarea {
   padding: 20px;
 }
 
-.form-fielf {
-  outline: 1px solid pink;
+.form-field {
+  outline: 5px solid pink;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
