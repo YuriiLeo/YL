@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Studio</title>
+    <link rel="stylesheet" href="/css/form2.css">
+
+</head>
+
+<body>
+    <form class="form js-speaker-form" autocomplete="off">
+        <h2>Оставьте свои данные, мы вам перезвоним</h2>
+        <div class="form-field">
+            <input class="form-input" 
+            placeholder="Yurii"
+            type="text" 
+            name="name" 
+            id="name" autofocus>
+            <label for="name" class="form-label">Імя</label>
+            <span class="icon">
+                <use></use>
+            </span>
+        </div>
+        <div class="form-field">
+            <input class="form-input" 
+            placeholder="380999999999"
+            type="tel" n
+            ame="tel" id
+            ="tel">
+            <label for="tel" class="form-label">Телефон</label>
+            
+        </div>
+        <div class="form-field">
+            <input class="form-input" 
+            placeholder="yourmail@mail.com"
+            t
+            ype="email"
+             name="mail"
+              id="mail">
+            <label for="mail" class="form-label">Почта</label>
+        </div>
+
+        <div class="form-field">
+            <label for="comment" class="comment-form-label">Комментарий</label>
+            <textarea class="comment" name="comment" id="comment" rows="10" placeholder="Введите текст"></textarea>
+        </div>
+
+        <!-- Політика конфіденційності -->
+        <div class="form-field">
+            <input class="form-input" type="checkbox" name="policy" id="policy">
+            <label for="policy" class="policy-form-label">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+        </div>
+
+        <button type="submit">Залишити заявку</button>
+    </form>
+    <script>
+        (() => {
+      .querySelector('.js-speaker-form')
+                .addEventListener('submit', e => {
+                    e.preventDefault();
+
+                    new FormData(e.currentTarget).forEach((value, name) =>
+                        console.log('${name}: ${value}'),
+                    );
+                });
+        })(); 
+    </script>
+</body>
+
+</html>

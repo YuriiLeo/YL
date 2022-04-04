@@ -1,0 +1,133 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #2a2a2a;
+}
+
+textarea {
+    resize: none;
+}
+
+.form {
+    width: 600px;
+    outline: 1px solid tomato;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.form-field {
+    outline: 5px solid pink;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    margin-bottom: 5px;
+    transform: translateY(-50%);
+
+    transition: transform 250ms linear;
+}
+
+.comment-form-label,
+.policy-form-label {
+    margin-bottom: 5px;
+}
+
+.form-input {
+    margin: 0;
+    padding: 6px 10px;
+    border-radius: 3px;
+    border: 1px solid #2a2a2a;
+}
+
+.form-input::placeholder {
+    color: aquamarine;
+}
+
+.form-input:focus+.form-label,
+.form-input:hover+.form-label,
+.form-input:not(:placeholder-shown)+.form-label {
+    color: blue;
+    transform: translateY(-50px);
+}
+
+.form-input:placeholder-shown {
+    background-color: blanchedalmond;
+}
+
+.icon {
+    position: absolute;
+    top:50%;
+    left:12px;
+    transform: translateY(-50%);
+
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: tomato;
+}
+
+.form-input:focus ~ .icon,
+.form-input:hover ~.icon {
+    background-color: blueviolet;
+}
+
+.group-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.topic-options {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* можна стилізувати по тегу так щоб менше класів створювати */
+
+.topic-options li {
+    display: flex;
+    align-items: center;
+}
+
+.topic-options input[type='checkbox'] {
+    width: 10px;
+    height: 10px;
+}
+
+.topic-options label {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.date {
+    border-color: blueviolet;
+    border-width: 5px;
+    border-radius: 4px;
+    padding: 20px 40px;
+    font-size: 40px;
+    color: red;
+}
+
+.comment {
+    padding: 8px;
+}
+
+/* @font-face - подключить скачанный */
+/* *(звездочка) ссылается на каждый элемент на странице */
+/* тег p{} используют редко*/
+/* ИД самый высокий приоритет*/
+/* класс class="text" in css .text*/
+/* атрибут задаем какому-то атрибуту напр [href]{
+    color:
+    можно задать более точечно более конкретной ссылке
+}*/
+/* потомка .header a {закрасит все что в вложено} */
+/* ребенка используем >*/
+/* соседа используем + ( */

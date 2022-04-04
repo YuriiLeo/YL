@@ -1,0 +1,26 @@
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+} 
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid #2a2a2a;
+    border-radius: 4px;
+}
+
+.checkbox:checked ~ .icon {
+    border-color: #2196F3;
+    background-color: #2196F3;
+    background-image: url(../img/check-over.svg);
+    background-origin: border-box; 
+    background-size: contain;
+}   

@@ -1,0 +1,64 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #2a2a2a;
+}
+
+textarea {
+    resize: none;
+}
+
+.form {
+    width: 600px;
+    outline: 1px solid tomato;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.form-field {
+    outline: 5px solid pink;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-label {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    margin-bottom: 5px;
+    transform: translateY(-50%);
+
+    transition: transform 250ms linear;
+}
+
+.comment-form-label,
+.policy-form-label {
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 100%;
+    margin: 0;
+    padding: 6px 10px;
+    border-radius: 3px;
+    border: 1px solid #2a2a2a;
+}
+
+
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: tomato;
+}
+
+.form-field:focus-within > .icon {
+    background-color: blue;
+}
